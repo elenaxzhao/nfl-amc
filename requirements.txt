@@ -7,3 +7,7 @@ numpy
 ipykernel
 jupyter
 torch>=2.0.0
+nflreadpy
+plotly
+pyyaml
+scipy

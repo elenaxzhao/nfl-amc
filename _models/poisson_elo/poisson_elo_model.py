@@ -15,7 +15,7 @@ Author: NFL Bets Analysis
 
 import numpy as np
 import pandas as pd
-import nfl_data_py as nfl
+import nflreadpy as nfl
 from scipy.optimize import minimize
 from scipy.stats import poisson
 import matplotlib.pyplot as plt
@@ -62,16 +62,20 @@ class PoissonELOModel:
         
         try:
             # Load play-by-play data
-            self.pbp_data = nfl.import_pbp_data(years)
+            self.pbp_data = nfl.load_pbp(years).to_pandas()
             print(f"✓ Loaded {len(self.pbp_data)} plays from {years}")
             
             # Load schedule data
-            self.schedule_data = nfl.import_schedules(years)
+            self.schedule_data = nfl.load_schedules(years).to_pandas()
             print(f"✓ Loaded {len(self.schedule_data)} games from schedule")
             
-            # Load team descriptions
-            self.team_info = nfl.import_team_desc()
-            print(f"✓ Loaded team information for {len(self.team_info)} teams")
+            # Load team descriptions (if available)
+            try:
+                self.team_info = nfl.load_teams().to_pandas()
+                print(f"✓ Loaded team information for {len(self.team_info)} teams")
+            except:
+                self.team_info = None
+                print("⚠ Team info not available")
             
         except Exception as e:
             print(f"Error loading data: {e}")

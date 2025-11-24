@@ -10,6 +10,8 @@ Test on: Week w
 Uses strict time-aware splits with no look-ahead.
 """
 
+import sys
+import os
 import yaml
 import torch
 import torch.nn as nn
@@ -20,6 +22,9 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 import warnings
 warnings.filterwarnings('ignore')
+
+# Add current directory to path to import modules
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from data_loader import NFLDataLoader, TimeAwareSplitter
 from feature_engineering import FeatureEngineer

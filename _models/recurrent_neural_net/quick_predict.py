@@ -11,10 +11,10 @@ import torch
 import pandas as pd
 from pathlib import Path
 
-from data_loader import NFLDataLoader
-from feature_engineering import FeatureEngineer
-from sequence_builder import SequenceBuilder
-from model import NFLGamePredictor
+from .data_loader import NFLDataLoader
+from .feature_engineering import FeatureEngineer
+from .sequence_builder import SequenceBuilder
+from .rnn_model import NFLGamePredictor
 
 
 def load_latest_model(checkpoint_dir: str = "checkpoints/") -> torch.nn.Module:

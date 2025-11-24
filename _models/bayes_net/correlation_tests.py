@@ -3,7 +3,6 @@ Comprehensive Correlation Analysis for NFL Data Variables vs Win/Loss Outcomes
 """
 
 import nflreadpy as nfl
-import polars as pl
 import pandas as pd
 import numpy as np
 from scipy.stats import pearsonr, spearmanr

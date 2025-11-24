@@ -1,6 +1,8 @@
 # Absorbing Markov Chain Win Probability Model
 
-A probabilistic model for predicting NFL game win probabilities using an absorbing Markov chain trained on historical play-by-play data. [Full Presentation Here](https://docs.google.com/presentation/d/1D66B3HM5KTGr8bA1JufWVsNjO5PdzZo4nGav3RqdYN4/edit?usp=sharing)
+A probabilistic model for predicting NFL game win probabilities using an absorbing Markov chain trained on historical play-by-play data. 
+
+[Full Presentation Here](https://docs.google.com/presentation/d/1D66B3HM5KTGr8bA1JufWVsNjO5PdzZo4nGav3RqdYN4/edit?usp=sharing)
 
 ## Table of Contents
 

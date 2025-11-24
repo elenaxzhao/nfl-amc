@@ -7,6 +7,12 @@ A simplified script to quickly test the improved Monte Carlo model
 with rolling/incremental training.
 """
 
+import sys
+import os
+
+# Add current directory to path to import the model
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from monte_carlo_model import ImprovedMonteCarloModel
 
 

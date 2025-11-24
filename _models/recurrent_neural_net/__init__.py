@@ -9,7 +9,7 @@ A PyTorch-based sequence model for predicting NFL game outcomes.
 from .data_loader import NFLDataLoader, TimeAwareSplitter
 from .feature_engineering import FeatureEngineer
 from .sequence_builder import SequenceBuilder, RecencyWeightCalculator
-from .model import NFLGamePredictor, TeamEncoder, WinPredictionHead, ScorePredictionHead
+from .rnn_model import NFLGamePredictor, TeamEncoder, WinPredictionHead, ScorePredictionHead
 from .trainer import Trainer, TrainingConfig, CombinedLoss
 from .metrics import MetricsCalculator, Calibrator, ResultsLogger
 

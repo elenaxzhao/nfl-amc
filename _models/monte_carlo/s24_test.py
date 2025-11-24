@@ -9,6 +9,12 @@ Test on: 2024 season, weeks 6-18
 Produces accuracy metrics for each week and overall average.
 """
 
+import sys
+import os
+
+# Add current directory to path to import the model
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from monte_carlo_model import ImprovedMonteCarloModel
 import pandas as pd
 import numpy as np

@@ -3,7 +3,7 @@ Command Line NFL Predictor
 Usage: python cli_predictor.py KC BUF 8 --home-injuries 1 --away-injuries 4 --wind 10
 """
 
-from nfl_bayesian_network import NFLBayesianNetwork, GameFeatures
+from .nfl_bayesian_network import NFLBayesianNetwork, GameFeatures
 import argparse
 
 def predict_game_cli(home_team, away_team, week, home_injuries=0, away_injuries=0, 

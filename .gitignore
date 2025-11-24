@@ -1,8 +1,13 @@
-# Python
+# Environment
 venv/
 .venv/
 env/
 .env
+.env
+.env.local
+.env.*.local
+
+# Python
 **/__pycache__/
 *.py[cod]
 *$py.class
@@ -10,24 +15,10 @@ env/
 .Python
 
 # Distribution / packaging
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
-.installed.cfg
 *.egg
-MANIFEST
 
 # PyInstaller
 *.manifest
@@ -47,12 +38,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Virtual environments
-venv/
-ENV/
-env/
-.venv/
-
 # IDEs
 .vscode/
 .idea/
@@ -63,36 +48,6 @@ env/
 .pydevproject
 .settings/
 
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb
-
-# pyenv
-.python-version
-
-# OS
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# Output files
-*.csv
-*.html
-*.png
-*.pkl
-*.txt
-!requirements.txt
-!README.md
-!LICENSE
-
-# Large data files
-*.parquet
-**/data/*.parquet
-
 # Model files
 nfl_bayesian_model.pkl
 nfl_correlation_*.html
@@ -101,11 +56,8 @@ correlation_summary.txt
 simple_nfl_correlations.csv
 nfl_predictions.csv
 
+# Large data files
+.rds
+
 # Logs
 *.log
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-

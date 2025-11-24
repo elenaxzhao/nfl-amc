@@ -19,7 +19,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime
-import nfl_data_py as nfl
+import nflreadpy as nfl
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score, log_loss, brier_score_loss
@@ -68,12 +68,12 @@ class LogisticRegressionTester:
         
         # Load play-by-play data
         print("Loading play-by-play data...")
-        self.pbp_data = nfl.import_pbp_data(all_seasons)
+        self.pbp_data = nfl.load_pbp(all_seasons).to_pandas()
         print(f"✓ Loaded {len(self.pbp_data):,} plays")
         
         # Load schedule data
         print("Loading schedule data...")
-        self.games_data = nfl.import_schedules(all_seasons)
+        self.games_data = nfl.load_schedules(all_seasons).to_pandas()
         print(f"✓ Loaded {len(self.games_data):,} games")
         
         # Filter to regular season only
